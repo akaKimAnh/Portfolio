@@ -1,4 +1,5 @@
 import { Project, Experience, Skill, Education } from '../types';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export const personalInfo = {
   name: "Kim Anh",
@@ -41,8 +42,8 @@ export const personalInfo = {
   github: "https://github.com/akaKimAnh",
   linkedin: "https://www.linkedin.com/in/anh-le-62912028b/",
   telegram: "https://t.me/kimanh_dev",
-  resumeUrl: "/CV_LE_THI_KIM_ANH.html",
-  avatarUrl: "/images/user.jpeg",
+  resumeUrl: getAssetUrl("/CV_LE_THI_KIM_ANH.html"),
+  avatarUrl: getAssetUrl("/images/user.jpeg"),
   stats: {
     en: [
       { label: "Primary Role", value: "Android Dev" },
@@ -75,7 +76,7 @@ export const projects: Project[] = [
       vi: "Tiên phong nghiên cứu và tích hợp EUDI Wallet SDK tuân thủ các tiêu chuẩn định danh quốc tế OpenID4VP và ISO 18013-5 (mDL). Thiết kế và phát triển toàn bộ giao diện bằng Jetpack Compose (Kotlin) theo kiến trúc MVVM."
     },
     category: "Mobile App",
-    image: "/images/trustedid.png",
+    image: getAssetUrl("/images/trustedid.png"),
     techStack: ["Kotlin", "Jetpack Compose", "MVVM", "EUDI Wallet SDK", "OpenID4VP", "ISO 18013-5 (mDL)"],
     githubUrl: "https://github.com/akaKimAnh",
     liveUrl: "https://github.com/akaKimAnh",
@@ -109,7 +110,7 @@ export const projects: Project[] = [
       vi: "Xây dựng và tối ưu ứng dụng Android sử dụng Java. Triển khai SSO Keycloak, xử lý quét mã QR trích xuất dữ liệu Căn cước công dân (CCCD), quản lý thông báo đẩy FCM kèm đọc giọng nói TTS và tích hợp API."
     },
     category: "Mobile App",
-    image: "/images/trustedpay.svg",
+    image: getAssetUrl("/images/trustedpay.svg"),
     techStack: ["Java", "Android SDK", "Keycloak SSO", "OAuth 2.0", "OpenID Connect", "FCM", "TTS", "QR Scanner (CCCD)"],
     liveUrl: "https://play.google.com/store/apps/details?id=vn.mobileid.trustedpay.client&hl=vi",
     featured: true,
@@ -142,7 +143,7 @@ export const projects: Project[] = [
       vi: "Nghiên cứu và triển khai các thành phần trong hệ sinh thái ZMP và Zalo UI để xây dựng mini app hiệu năng cao. Sử dụng React JS và TypeScript đảm bảo giao diện đáp ứng tốt và thân thiện với người dùng."
     },
     category: "Mini App",
-    image: "/images/zalo-miniapp.svg",
+    image: getAssetUrl("/images/zalo-miniapp.svg"),
     techStack: ["React JS", "TypeScript", "ZMP SDK", "Zalo UI", "Tailwind CSS"],
     githubUrl: "https://github.com/akaKimAnh",
     liveUrl: "https://github.com/akaKimAnh",
@@ -176,7 +177,7 @@ export const projects: Project[] = [
       vi: "Chuyển đổi bản vẽ Figma thành giao diện web chuẩn xác bằng React JS và Tailwind CSS. Xây dựng các bảng điều khiển quản lý dữ liệu trực quan chú trọng tính đáp ứng đa thiết bị."
     },
     category: "Frontend Web",
-    image: "/images/fasense.svg",
+    image: getAssetUrl("/images/fasense.svg"),
     techStack: ["React JS", "TypeScript", "Tailwind CSS", "Figma"],
     githubUrl: "https://github.com/akaKimAnh",
     liveUrl: "https://github.com/akaKimAnh",
