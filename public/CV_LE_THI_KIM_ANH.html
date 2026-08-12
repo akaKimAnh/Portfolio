@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Lê Thị Kim Anh — Android Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; color: black !important; }
+      .cv-container { box-shadow: none !important; margin: 0 !important; width: 100% !important; max-width: 100% !important; padding: 0 !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-800 min-h-screen py-10 px-4 flex flex-col items-center">
+
+  <!-- Print & Download Control Bar -->
+  <div class="no-print max-w-4xl w-full flex items-center justify-between bg-slate-950 text-white p-4 rounded-xl border border-slate-800 mb-6 shadow-xl">
+    <div class="flex items-center gap-3">
+      <div class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></div>
+      <span class="font-bold text-sm">Lê Thị Kim Anh — Curriculum Vitae (CV)</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <button onclick="window.print()" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-semibold shadow-md flex items-center gap-2 cursor-pointer transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+        Print / Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- Main CV Printable Page -->
+  <div class="cv-container bg-white text-slate-800 max-w-4xl w-full p-8 sm:p-12 rounded-2xl shadow-2xl space-y-8 font-sans">
+    
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6 border-b pb-6 border-slate-200">
+      <div class="space-y-2 text-center sm:text-left">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">LE THI KIM ANH</h1>
+        <h2 class="text-lg font-bold text-blue-700 tracking-wide">Android Developer</h2>
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-1 text-xs text-slate-600 pt-1 font-medium">
+          <span>📅 January 22, 2002</span>
+          <span>📞 0886832201</span>
+          <span>✉️ anhltk.work@gmail.com</span>
+          <span>👤 Female</span>
+          <span>📍 Hiep Binh, Thu Duc City, Ho Chi Minh City</span>
+        </div>
+        <div class="text-xs text-blue-600 font-mono pt-0.5">
+          🌐 <a href="https://github.com/akaKimAnh" target="_blank" class="hover:underline">https://github.com/akaKimAnh</a> | 
+          <a href="https://www.linkedin.com/in/anh-le-62912028b/" target="_blank" class="hover:underline">LinkedIn</a>
+        </div>
+      </div>
+      <img src="/images/user.jpeg" alt="Le Thi Kim Anh" class="w-28 h-28 rounded-full object-cover border-2 border-blue-600 shadow-md flex-shrink-0" />
+    </div>
+
+    <!-- Career Objective -->
+    <div class="space-y-2">
+      <h3 class="text-sm font-bold uppercase tracking-wider text-blue-800 border-b border-blue-100 pb-1">Career Objective</h3>
+      <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+        Leveraging a strong foundation in logic and system architecture from Java development to transition into <strong>Kotlin</strong> and <strong>Jetpack Compose</strong> to enhance productivity. My goal is to become a versatile Android Developer, swiftly mastering modern frameworks and applying advanced technological solutions to optimize business challenges effectively.
+      </p>
+    </div>
+
+    <!-- Education -->
+    <div class="space-y-2">
+      <h3 class="text-sm font-bold uppercase tracking-wider text-blue-800 border-b border-blue-100 pb-1">Education</h3>
+      <div class="flex justify-between items-start text-xs sm:text-sm">
+        <div>
+          <span class="font-bold text-slate-900">Thuyloi University</span> — <span class="text-slate-700 font-medium">Bachelor of Information Technology</span>
+          <div class="text-xs text-slate-500 font-semibold mt-0.5">Classification: Very Good</div>
+        </div>
+        <div class="text-xs font-mono text-slate-500 font-semibold">2020 – 2024</div>
+      </div>
+    </div>
+
+    <!-- Work Experience -->
+    <div class="space-y-3">
+      <h3 class="text-sm font-bold uppercase tracking-wider text-blue-800 border-b border-blue-100 pb-1">Work Experience</h3>
+      
+      <div class="space-y-2">
+        <div class="flex justify-between items-start text-xs sm:text-sm">
+          <div>
+            <span class="font-bold text-slate-900">MOBILE-ID TECHNOLOGY AND SERVICES JSC</span> — <span class="text-blue-700 font-bold">ANDROID DEVELOPER</span>
+          </div>
+          <div class="text-xs font-mono text-slate-500 font-semibold">07/2023 – Present</div>
+        </div>
+        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-700 space-y-1.5 pl-1 leading-relaxed">
+          <li>Developed Android applications using <strong>Java</strong>, currently specializing in migrating and building modern user interfaces with <strong>Jetpack Compose</strong>.</li>
+          <li>Implemented Single Sign-On (SSO) solutions with <strong>Keycloak</strong>, strictly adhering to <strong>OAuth 2.0</strong> and <strong>OpenID Connect</strong> standards to ensure user data security.</li>
+          <li>Integrated <strong>Firebase Cloud Messaging (FCM)</strong> for real-time push notification management and deployed <strong>Text-to-Speech (TTS)</strong> features to enhance app accessibility.</li>
+          <li>Collaborated directly with backend teams via APIs to handle complex data and workflows, ensuring stable and precise application performance.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="space-y-4">
+      <h3 class="text-sm font-bold uppercase tracking-wider text-blue-800 border-b border-blue-100 pb-1">Key Projects</h3>
+
+      <!-- Project 1 -->
+      <div class="space-y-1.5">
+        <div class="flex justify-between items-start text-xs sm:text-sm">
+          <div>
+            <span class="font-bold text-slate-900">TrustedID</span> — <span class="text-blue-700 font-medium">Android Developer</span>
+          </div>
+          <div class="text-xs font-mono text-slate-500 font-semibold">1/2026 – Present</div>
+        </div>
+        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-700 space-y-1 pl-1">
+          <li><strong>Modern R&D:</strong> Pioneered research and integration of the EUDI Wallet SDK, following international identity standards: <strong>OpenID4VP</strong> and <strong>ISO 18013-5 (mDL)</strong>.</li>
+          <li><strong>Modern UI Development:</strong> Architected and developed the entire application interface using <strong>Jetpack Compose (Kotlin)</strong> with <strong>MVVM</strong> architecture for efficient state management.</li>
+          <li><strong>Identity Processing:</strong> Configured Trust Validators and managed digital credential verification flows, ensuring high security and global interoperability.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="space-y-1.5">
+        <div class="flex justify-between items-start text-xs sm:text-sm">
+          <div>
+            <span class="font-bold text-slate-900">TrustedPay</span> — <span class="text-blue-700 font-medium">Android Developer</span>
+          </div>
+          <div class="text-xs font-mono text-slate-500 font-semibold">5/2025 – Present</div>
+        </div>
+        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-700 space-y-1 pl-1">
+          <li><strong>Development & Maintenance:</strong> Built and optimized Android applications using Java.</li>
+          <li><strong>Security & Identity:</strong> Deployed SSO (Keycloak) and handled QR Code scanning for CCCD (Citizen ID) data extraction and authentication.</li>
+          <li><strong>Real-time Interaction:</strong> Managed push notifications via FCM and optimized automated notification reading using TTS.</li>
+          <li><strong>System Integration:</strong> Integrated complex backend APIs and handled system workflows to ensure high reliability.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="space-y-1.5">
+        <div class="flex justify-between items-start text-xs sm:text-sm">
+          <div>
+            <span class="font-bold text-slate-900">Zalo Mini App (ZMP)</span> — <span class="text-blue-700 font-medium">Android Developer</span>
+          </div>
+          <div class="text-xs font-mono text-slate-500 font-semibold">12/2025 – 2/2026</div>
+        </div>
+        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-700 space-y-1 pl-1">
+          <li><strong>R&D:</strong> Explored and implemented components within the ZMP ecosystem and Zalo UI to build high-performance mini-apps.</li>
+          <li><strong>Experience Optimization:</strong> Applied React JS and TypeScript to ensure responsive and user-friendly interfaces.</li>
+        </ul>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="space-y-1.5">
+        <div class="flex justify-between items-start text-xs sm:text-sm">
+          <div>
+            <span class="font-bold text-slate-900">Web TrustedPay & FacialSense</span> — <span class="text-blue-700 font-medium">Frontend Developer</span>
+          </div>
+          <div class="text-xs font-mono text-slate-500 font-semibold">8/2023 – 04/2024</div>
+        </div>
+        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-700 space-y-1 pl-1">
+          <li><strong>Frontend Development:</strong> Converted Figma designs into pixel-perfect web interfaces using React JS and Tailwind CSS.</li>
+          <li><strong>Internal Systems:</strong> Built intuitive data management dashboards focusing on cross-device responsiveness.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="space-y-3">
+      <h3 class="text-sm font-bold uppercase tracking-wider text-blue-800 border-b border-blue-100 pb-1">Technical Skills</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div>
+          <span class="font-bold text-slate-900">Mobile Development:</span>
+          <p class="text-slate-700">Kotlin, Java, Jetpack Compose, Android SDK, MVVM, Coroutines, Flow, Dagger/Hilt, Retrofit.</p>
+        </div>
+        <div>
+          <span class="font-bold text-slate-900">Security & Identity:</span>
+          <p class="text-slate-700">EUDI Wallet SDK, OpenID4VP, ISO 18013-5 (mDL), OAuth 2.0, OpenID Connect, Keycloak (SSO), QR Code Identity Processing.</p>
+        </div>
+        <div>
+          <span class="font-bold text-slate-900">Platforms & Services:</span>
+          <p class="text-slate-700">Firebase (FCM), Google Play Console, Text-to-Speech (TTS), Biometric Authentication, Git, Postman.</p>
+        </div>
+        <div>
+          <span class="font-bold text-slate-900">Web & Mini App:</span>
+          <p class="text-slate-700">React.js, TypeScript, Tailwind CSS, ZMP SDK, Zalo UI, Figma.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

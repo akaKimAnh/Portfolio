@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <defs>
+    <linearGradient id="bgGradZalo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021526"/>
+      <stop offset="50%" stop-color="#03254c"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="shadowZalo" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="600" fill="url(#bgGradZalo)"/>
+
+  <!-- Zalo Blue ambient glow circles -->
+  <circle cx="200" cy="150" r="180" fill="#0068FF" opacity="0.12" filter="blur(40px)"/>
+  <circle cx="800" cy="450" r="200" fill="#0099FF" opacity="0.1" filter="blur(50px)"/>
+
+  <!-- Centered White Card Container for Logo -->
+  <rect x="120" y="150" width="760" height="300" rx="24" fill="#ffffff" filter="url(#shadowZalo)"/>
+
+  <!-- Logo Content: Zalo MiniApp -->
+  <g transform="translate(500, 330)">
+    <text text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="110">
+      <tspan font-weight="900" fill="#0068FF" letter-spacing="-2">Zalo </tspan>
+      <tspan font-weight="300" fill="#0068FF" letter-spacing="-1">MiniApp</tspan>
+    </text>
+  </g>
+
+  <!-- Badge at bottom -->
+  <rect x="350" y="480" width="300" height="40" rx="20" fill="#03254c" stroke="#0068FF" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="500" y="505" font-family="monospace" font-weight="700" font-size="14" fill="#38bdf8" text-anchor="middle" letter-spacing="1.5">REACT &amp; ZMP SDK PLATFORM</text>
+</svg>
