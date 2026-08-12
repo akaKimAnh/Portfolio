@@ -36,8 +36,8 @@ export const personalInfo = {
     en: "Leveraging a strong foundation in logic and system architecture from Java development to transition into Kotlin and Jetpack Compose to enhance productivity. My goal is to become a versatile Android Developer, swiftly mastering modern frameworks and applying advanced technological solutions to optimize business challenges effectively.\n\nAt MOBILE-ID TECHNOLOGY AND SERVICES JSC, I develop Android applications using Java, currently specializing in migrating and building modern user interfaces with Jetpack Compose. I've implemented Single Sign-On (SSO) with Keycloak (OAuth 2.0 / OpenID Connect), integrated Firebase Cloud Messaging (FCM), Text-to-Speech (TTS), and pioneered research into the EUDI Wallet SDK following OpenID4VP and ISO 18013-5 (mDL) standards.",
     vi: "Phát huy nền tảng tư duy logic và kiến trúc hệ thống từ lập trình Java để chuyển đổi sang Kotlin và Jetpack Compose nhằm nâng cao năng suất. Mục tiêu của tôi là trở thành một Android Developer đa năng, nhanh chóng làm chủ các framework hiện đại và áp dụng các giải pháp công nghệ tiên tiến để giải quyết các bài toán kinh doanh hiệu quả.\n\nTại MOBILE-ID TECHNOLOGY AND SERVICES JSC, tôi phát triển các ứng dụng Android sử dụng Java, hiện đang chuyên sâu vào việc chuyển đổi và xây dựng giao diện người dùng hiện đại bằng Jetpack Compose. Tôi đã triển khai các giải pháp Single Sign-On (SSO) với Keycloak (OAuth 2.0 / OpenID Connect), tích hợp Firebase Cloud Messaging (FCM), Text-to-Speech (TTS), và tiên phong nghiên cứu tích hợp EUDI Wallet SDK theo các chuẩn định danh quốc tế OpenID4VP và ISO 18013-5 (mDL)."
   },
-  email: "anhltk.work@gmail.com",
-  phone: "0886832201",
+  email: (import.meta.env.VITE_PERSONAL_EMAIL as string) || "anhltk.work@gmail.com",
+  phone: (import.meta.env.VITE_PERSONAL_PHONE as string) || "0886832201",
   github: "https://github.com/akaKimAnh",
   linkedin: "https://www.linkedin.com/in/anh-le-62912028b/",
   telegram: "https://t.me/kimanh_dev",
