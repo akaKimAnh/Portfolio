@@ -3,7 +3,7 @@ import { Sparkles, ArrowRight, Github, Linkedin, Mail, Download, Send, Check } f
 import { personalInfo, translations } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
 import { playClickSound, playSuccessSound } from '../utils/audio';
-import { getAssetUrl } from '../utils/assetHelper';
+import { getAssetUrl, defaultAvatar } from '../utils/assetHelper';
 
 interface HeroProps {
   onCopyEmail: () => void;
@@ -67,12 +67,12 @@ export default function Hero({ onCopyEmail, emailCopied }: HeroProps) {
               </div>
             ) : (
               <img
-                src={personalInfo.avatarUrl || getAssetUrl('/images/user.jpeg')}
+                src={personalInfo.avatarUrl || defaultAvatar}
                 alt={personalInfo.name}
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  if (!target.src.includes('/images/user.jpg')) {
-                    target.src = getAssetUrl('/images/user.jpg');
+                  if (target.src !== defaultAvatar) {
+                    target.src = defaultAvatar;
                   } else {
                     setImgError(true);
                   }

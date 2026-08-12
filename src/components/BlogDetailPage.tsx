@@ -7,7 +7,7 @@ import {
 import { blogPosts, translations, personalInfo } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
 import { playClickSound, playSuccessSound } from '../utils/audio';
-import { getAssetUrl } from '../utils/assetHelper';
+import { getAssetUrl, defaultAvatar } from '../utils/assetHelper';
 
 interface BlogDetailPageProps {
   postId: string;
@@ -224,10 +224,10 @@ export default function BlogDetailPage({ postId, onBack, onSelectPost }: BlogDet
           <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-slate-800/80">
             <div className="flex items-center gap-3.5">
               <img
-                src={personalInfo.avatarUrl || getAssetUrl('/images/user.jpeg')}
+                src={personalInfo.avatarUrl || defaultAvatar}
                 alt={post.author}
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = getAssetUrl('/images/user.jpg');
+                  (e.target as HTMLImageElement).src = defaultAvatar;
                 }}
                 className="w-12 h-12 rounded-full object-cover border-2 border-blue-500/40 shadow-md"
               />

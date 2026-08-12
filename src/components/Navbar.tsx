@@ -3,7 +3,7 @@ import { Command, Sparkles, Languages } from 'lucide-react';
 import { playClickSound } from '../utils/audio';
 import { useLanguage } from '../context/LanguageContext';
 import { personalInfo, translations } from '../data/portfolioData';
-import { getAssetUrl } from '../utils/assetHelper';
+import { getAssetUrl, defaultAvatar } from '../utils/assetHelper';
 
 interface NavbarProps {
   onOpenCommandPalette: () => void;
@@ -64,10 +64,10 @@ export default function Navbar({ onOpenCommandPalette, activeSection, onNavigate
           className="flex items-center gap-2 group cursor-pointer"
         >
           <img
-            src={personalInfo.avatarUrl || getAssetUrl('/images/user.jpeg')}
+            src={personalInfo.avatarUrl || defaultAvatar}
             alt={personalInfo.name}
             onError={(e) => {
-              (e.target as HTMLImageElement).src = getAssetUrl('/images/user.jpg');
+              (e.target as HTMLImageElement).src = defaultAvatar;
             }}
             className="w-8 h-8 rounded-full object-cover border border-blue-500/40 shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform"
           />

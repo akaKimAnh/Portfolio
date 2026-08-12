@@ -1,5 +1,5 @@
 import { Project, Experience, Skill, Education } from '../types';
-import { getAssetUrl } from '../utils/assetHelper';
+import { getAssetUrl, defaultAvatar } from '../utils/assetHelper';
 
 export const personalInfo = {
   name: "Kim Anh",
@@ -43,7 +43,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/anh-le-62912028b/",
   telegram: "https://t.me/kimanh_dev",
   resumeUrl: getAssetUrl("/CV_LE_THI_KIM_ANH.html"),
-  avatarUrl: getAssetUrl("/images/user.jpeg"),
+  avatarUrl: defaultAvatar,
   stats: {
     en: [
       { label: "Primary Role", value: "Android Dev" },
