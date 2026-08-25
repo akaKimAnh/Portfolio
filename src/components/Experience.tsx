@@ -105,7 +105,7 @@ export default function Experience() {
                   {edu.period}
                 </span>
               </div>
-              <p className="text-xs font-semibold text-blue-400">{edu.institution}</p>
+              <p className="text-xs font-semibold text-blue-400">{edu.institution[lang]}</p>
               <p className="text-xs text-slate-400 leading-relaxed">{edu.details[lang]}</p>
             </div>
           ))}

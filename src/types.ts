@@ -46,7 +46,7 @@ export interface Skill {
 
 export interface Education {
   degree: LocalizedString;
-  institution: string;
+  institution: LocalizedString;
   period: string;
   details: LocalizedString;
 }

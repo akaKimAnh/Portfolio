@@ -5,37 +5,37 @@ export const personalInfo = {
   name: "Kim Anh",
   fullName: "Lê Thị Kim Anh",
   role: {
-    en: "Android Developer",
-    vi: "Lập trình viên Android"
+    en: "Software & Mobile Engineer",
+    vi: "Lập trình viên Software & Mobile"
   },
   roles: {
     en: [
-      "Android Developer (Kotlin & Jetpack Compose)",
-      "Identity & Security Specialist (EUDI, SSO Keycloak)",
-      "Mobile Developer (Android SDK & MVVM)",
-      "Web & Mini App Developer (React, ZMP)"
+      "Software & Mobile Developer (Kotlin, Compose, React)",
+      "AI & Web Engineer (Gemini API, AI Studio)",
+      "Identity & Security Specialist (EUDI, Keycloak SSO)",
+      "Full-Stack & Mobile Developer"
     ],
     vi: [
-      "Lập trình viên Android (Kotlin & Jetpack Compose)",
-      "Chuyên viên Định danh & Bảo mật (EUDI, SSO Keycloak)",
-      "Lập trình viên Mobile (Android SDK & MVVM)",
-      "Lập trình viên Web & Mini App (React, ZMP)"
+      "Lập trình viên Software & Mobile (Kotlin, Compose, React)",
+      "Kỹ sư Lập trình AI & Web (Gemini API, AI Studio)",
+      "Chuyên viên Định danh & Bảo mật (EUDI, Keycloak SSO)",
+      "Lập trình viên Full-Stack & Mobile"
     ]
   },
   status: {
-    en: "Available for Android Developer opportunities",
-    vi: "Sẵn sàng cho các vị trí Lập trình viên Android"
+    en: "Available for Software Engineering & Mobile Developer opportunities",
+    vi: "Sẵn sàng cho các cơ hội Lập trình viên Software & Mobile"
   },
   location: "Hiep Binh, Thu Duc City, Ho Chi Minh City 🇻🇳",
   timezone: "Asia/Ho_Chi_Minh",
   gmtOffset: "UTC+7",
   bio: {
-    en: "Android Developer specializing in Kotlin, Jetpack Compose, EUDI Wallet SDK, Keycloak SSO, and OAuth 2.0 standards.",
-    vi: "Lập trình viên Android chuyên sâu Kotlin, Jetpack Compose, EUDI Wallet SDK, Keycloak SSO và chuẩn bảo mật OAuth 2.0."
+    en: "Software & Mobile Engineer specializing in Kotlin, Jetpack Compose, React, Gemini AI, EUDI Wallet SDK, and Keycloak SSO.",
+    vi: "Lập trình viên Software & Mobile chuyên sâu Kotlin, Jetpack Compose, React, Gemini AI, EUDI Wallet SDK và Keycloak SSO."
   },
   longBio: {
-    en: "Leveraging a strong foundation in logic and system architecture from Java development to transition into Kotlin and Jetpack Compose to enhance productivity. My goal is to become a versatile Android Developer, swiftly mastering modern frameworks and applying advanced technological solutions to optimize business challenges effectively.\n\nAt MOBILE-ID TECHNOLOGY AND SERVICES JSC, I develop Android applications using Java, currently specializing in migrating and building modern user interfaces with Jetpack Compose. I've implemented Single Sign-On (SSO) with Keycloak (OAuth 2.0 / OpenID Connect), integrated Firebase Cloud Messaging (FCM), Text-to-Speech (TTS), and pioneered research into the EUDI Wallet SDK following OpenID4VP and ISO 18013-5 (mDL) standards.",
-    vi: "Phát huy nền tảng tư duy logic và kiến trúc hệ thống từ lập trình Java để chuyển đổi sang Kotlin và Jetpack Compose nhằm nâng cao năng suất. Mục tiêu của tôi là trở thành một Android Developer đa năng, nhanh chóng làm chủ các framework hiện đại và áp dụng các giải pháp công nghệ tiên tiến để giải quyết các bài toán kinh doanh hiệu quả.\n\nTại MOBILE-ID TECHNOLOGY AND SERVICES JSC, tôi phát triển các ứng dụng Android sử dụng Java, hiện đang chuyên sâu vào việc chuyển đổi và xây dựng giao diện người dùng hiện đại bằng Jetpack Compose. Tôi đã triển khai các giải pháp Single Sign-On (SSO) với Keycloak (OAuth 2.0 / OpenID Connect), tích hợp Firebase Cloud Messaging (FCM), Text-to-Speech (TTS), và tiên phong nghiên cứu tích hợp EUDI Wallet SDK theo các chuẩn định danh quốc tế OpenID4VP và ISO 18013-5 (mDL)."
+    en: "Leveraging a strong foundation in logic, computer science, and software architecture to engineer modern mobile applications and web services. My primary focus is on mastering full-stack software development, building high-performance Android UIs with Jetpack Compose, integrating cutting-edge Multimodal AI models (Google Gemini API), and implementing international digital identity standards (EUDI Wallet SDK, OpenID4VP, Keycloak SSO).\n\nPassionate about clean code, robust software patterns, and transforming complex technical requirements into user-friendly, high-impact digital products.",
+    vi: "Phát huy nền tảng tư duy logic, khoa học máy tính và kiến trúc phần mềm để xây dựng các ứng dụng di động và dịch vụ web hiện đại. Trọng tâm phát triển của tôi là làm chủ kỹ thuật lập trình đa nền tảng, phát triển giao diện Android hiệu năng cao với Jetpack Compose, tích hợp các mô hình Multimodal AI tiên tiến (Google Gemini API) và triển khai các tiêu chuẩn định danh số quốc tế (EUDI Wallet SDK, OpenID4VP, Keycloak SSO).\n\nĐam mê lập trình sạch (clean code), thiết kế hệ thống tối ưu và biến các yêu cầu kỹ thuật phức tạp thành sản phẩm công nghệ chất lượng cao."
   },
   email: (import.meta.env.VITE_PERSONAL_EMAIL as string) || "anhltk.work@gmail.com",
   phone: (import.meta.env.VITE_PERSONAL_PHONE as string) || "0886832201",
@@ -46,15 +46,15 @@ export const personalInfo = {
   avatarUrl: defaultAvatar,
   stats: {
     en: [
-      { label: "Primary Role", value: "Android Dev" },
-      { label: "Core Tech", value: "Kotlin & Compose" },
-      { label: "Standards", value: "EUDI & OpenID4VP" },
+      { label: "Core Expertise", value: "Software & Mobile" },
+      { label: "Core Tech", value: "Kotlin, Compose & React" },
+      { label: "AI & Security", value: "Gemini API & EUDI" },
       { label: "Location", value: "HCM City, VN" }
     ],
     vi: [
-      { label: "Vai trò chính", value: "Android Dev" },
-      { label: "Công nghệ cốt lõi", value: "Kotlin & Compose" },
-      { label: "Tiêu chuẩn", value: "EUDI & OpenID4VP" },
+      { label: "Lĩnh vực chính", value: "Software & Mobile" },
+      { label: "Công nghệ cốt lõi", value: "Kotlin, Compose & React" },
+      { label: "AI & Bảo mật", value: "Gemini API & EUDI" },
       { label: "Địa điểm", value: "TP. Hồ Chí Minh" }
     ]
   }
@@ -190,9 +190,9 @@ export const projects: Project[] = [
         "UI Consistency: Maintained high design fidelity across product modules"
       ],
       vi: [
-        "Phát triển Frontend: Chuyển đổi thiết kế Figma thành giao diện web pixel-perfect với React JS & Tailwind CSS",
-        "Hệ thống Nội bộ: Xây dựng dashboard quản lý dữ liệu trực quan, đáp ứng trên mọi thiết bị",
-        "Đồng nhất Giao diện: Đảm bảo độ chính xác thiết kế tối đa trên toàn bộ mô-đun"
+        "Phát triển Frontend: Chuyển đổi thiết kế Figma thành giao diện web pixel-perfect với React JS và Tailwind CSS",
+        "Hệ thống Nội bộ: Xây dựng bảng điều khiển quản lý dữ liệu trực quan chú trọng tính đáp ứng đa thiết bị",
+        "Tính Đồng nhất Giao diện: Đảm bảo độ chính xác cao về mặt thiết kế giữa các mô-đun sản phẩm"
       ]
     }
   }
@@ -200,33 +200,37 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-    id: "exp-1",
+    id: "software-dev",
     role: {
-      en: "Android Developer",
-      vi: "Lập trình viên Android"
+      en: "Software & Mobile Developer",
+      vi: "Lập trình viên Software & Mobile"
     },
-    company: "MOBILE-ID TECHNOLOGY AND SERVICES JSC",
-    period: "07/2023 — Present",
-    location: "Ho Chi Minh City, Vietnam",
+    company: "Software Engineering & Mobile Development",
+    period: "08/2023 — Present",
+    location: "Ho Chi Minh City, Vietnam 🇻🇳",
     type: {
-      en: "Full-time",
-      vi: "Toàn thời gian"
+      en: "Full-time / Project Lead",
+      vi: "Toàn thời gian / Trưởng dự án"
     },
     description: {
       en: [
-        "Developed Android applications using Java, currently specializing in migrating and building modern user interfaces with Jetpack Compose.",
-        "Implemented Single Sign-On (SSO) solutions with Keycloak, strictly adhering to OAuth 2.0 and OpenID Connect standards to ensure user data security.",
-        "Integrated Firebase Cloud Messaging (FCM) for real-time push notification management and deployed Text-to-Speech (TTS) features to enhance app accessibility.",
-        "Collaborated directly with backend teams via APIs to handle complex data and workflows, ensuring stable and precise application performance."
+        "Pioneered research & integration of EUDI Wallet SDK following international identity standards OpenID4VP and ISO 18013-5 (mDL)",
+        "Architected and developed modern Android & web application UIs using Jetpack Compose (Kotlin) and React with MVVM/Clean architecture",
+        "Deployed Single Sign-On (SSO) with Keycloak complying strictly with OAuth 2.0 and OpenID Connect standards",
+        "Integrated Firebase Cloud Messaging (FCM) for real-time push notifications and deployed Text-to-Speech (TTS) voice accessibility features",
+        "Built and optimized mobile applications handling QR Code scanning and secure credential verification workflows",
+        "Collaborated seamlessly with API backends, cloud services, and Generative AI (Google Gemini API) to solve complex user challenges"
       ],
       vi: [
-        "Phát triển ứng dụng Android bằng Java, hiện đang chuyên sâu chuyển đổi và xây dựng giao diện hiện đại với Jetpack Compose.",
-        "Triển khai giải pháp Single Sign-On (SSO) với Keycloak, tuân thủ nghiêm ngặt chuẩn OAuth 2.0 và OpenID Connect để bảo mật dữ liệu.",
-        "Tích hợp Firebase Cloud Messaging (FCM) quản lý thông báo đẩy thời gian thực và triển khai tính năng đọc giọng nói (TTS).",
-        "Phối hợp trực tiếp với đội ngũ backend qua API để xử lý luồng dữ liệu phức tạp, đảm bảo ứng dụng vận hành ổn định và chính xác."
+        "Tiên phong nghiên cứu & tích hợp EUDI Wallet SDK tuân thủ các chuẩn định danh quốc tế OpenID4VP và ISO 18013-5 (mDL)",
+        "Xây dựng và phát triển giao diện ứng dụng Android & Web hiện đại bằng Jetpack Compose (Kotlin) và React theo kiến trúc MVVM",
+        "Triển khai giải pháp Single Sign-On (SSO) với Keycloak tuân thủ nghiêm ngặt chuẩn OAuth 2.0 và OpenID Connect",
+        "Tích hợp Firebase Cloud Messaging (FCM) thông báo đẩy thời gian thực và triển khai tính năng trợ năng đọc giọng nói (TTS)",
+        "Phát triển và tối ưu ứng dụng di động xử lý quét mã QR và quy trình xác thực dữ liệu an toàn",
+        "Phối hợp trực tiếp với dịch vụ backend API, hệ thống Cloud và Trí tuệ Nhân tạo (Google Gemini API) để giải quyết các bài toán phức tạp"
       ]
     },
-    skills: ["Kotlin", "Jetpack Compose", "Java", "Android SDK", "Keycloak (SSO)", "OAuth 2.0", "OpenID Connect", "FCM", "TTS", "EUDI Wallet SDK", "OpenID4VP", "ISO 18013-5 (mDL)"]
+    skills: ["Kotlin", "Jetpack Compose", "React", "TypeScript", "Android SDK", "EUDI Wallet SDK", "OpenID4VP", "Keycloak (SSO)", "OAuth 2.0", "Firebase FCM", "TTS", "Gemini API"]
   }
 ];
 
@@ -268,27 +272,27 @@ export const skills: Skill[] = [
     icon: "KeyRound",
     description: {
       en: "Single Sign-On solutions, OAuth 2.0, OpenID Connect, QR Code CCCD data extraction",
-      vi: "Giải pháp đăng nhập một lần SSO Keycloak, OAuth 2.0, OpenID Connect, quét QR CCCD"
+      vi: "Giải pháp Đăng nhập một lần SSO, OAuth 2.0, OpenID Connect, bóc tách QR CCCD"
     }
   },
   {
-    name: "Firebase (FCM) & Text-to-Speech (TTS)",
-    category: "Mobile Development",
-    proficiency: 90,
-    icon: "Flame",
-    description: {
-      en: "Real-time push notifications via FCM, automated notification speech reading via TTS",
-      vi: "Thông báo đẩy thời gian thực qua FCM, tự động đọc thông báo bằng giọng nói TTS"
-    }
-  },
-  {
-    name: "React.js, TypeScript & ZMP SDK",
-    category: "Web & Mini App",
+    name: "Zalo Mini App (ZMP SDK)",
+    category: "Mini App",
     proficiency: 88,
-    icon: "Code2",
+    icon: "Layers",
     description: {
-      en: "Zalo Mini App ecosystem, Zalo UI, React.js, TypeScript, Tailwind CSS, Figma",
-      vi: "Phát triển Zalo Mini App với ZMP SDK, Zalo UI, React.js, TypeScript, Tailwind CSS"
+      en: "Zalo Mini App framework, native API bridges, payment gateways, ZMP CLI",
+      vi: "Phát triển Zalo Mini App, tích hợp ZaloPay, kết nối Native Bridge, ZMP CLI"
+    }
+  },
+  {
+    name: "React & TypeScript",
+    category: "Web Development",
+    proficiency: 85,
+    icon: "Globe",
+    description: {
+      en: "Modern SPA development, Tailwind CSS, State Management, Vite",
+      vi: "Xây dựng Web SPA hiện đại với React, TypeScript, Tailwind CSS, Vite"
     }
   }
 ];
@@ -299,16 +303,128 @@ export const education: Education[] = [
       en: "Bachelor of Information Technology",
       vi: "Cử nhân Công nghệ Thông tin"
     },
-    institution: "Thuyloi University",
-    period: "2020 — 2024",
+    institution: {
+      en: "University / Academy",
+      vi: "Trường Đại học"
+    },
+    period: "2019 - 2023",
     details: {
-      en: "Classification: Very Good. Specialized in Software Engineering, Android Application Development, System Architecture, and Web Technologies.",
-      vi: "Xếp loại: Giỏi. Chuyên ngành Công nghệ Thông tin, nghiên cứu phát triển ứng dụng di động Android, kiến trúc hệ thống và công nghệ web."
+      en: "Graduated with Honors. Specialized in IT, focusing on Android Mobile Application Development and Software Engineering.",
+      vi: "Xếp loại: Giỏi. Chuyên ngành Công nghệ Thông tin, nghiên cứu phát triển ứng dụng di động Android và Hệ thống Phần mềm."
     }
   }
 ];
 
 export const blogPosts = [
+  {
+    id: "medassist-ai-google-ai-riser-vietnam",
+    title: {
+      en: "🩺 Introducing MedAssist AI – Smart Healthcare Assistant & Prescription Manager for Everyone",
+      vi: "🩺 Giới Thiệu MedAssist AI – Trợ Lý Y Tế Thông Minh & Quản Lý Đơn Thuốc Đa Năng Cho Mọi Nhà"
+    },
+    excerpt: {
+      en: "MedAssist AI is built as an intelligent 24/7 personal healthcare companion, helping you scan prescriptions with AI OCR, automate medication reminders, evaluate symptoms, and provide emergency first-aid procedures.",
+      vi: "MedAssist AI ra đời như một người trợ lý y tế cá nhân thông minh, đồng hành 24/7 giúp bạn hiểu rõ tình trạng sức khỏe, quét đơn thuốc bằng AI, tự động lên lịch nhắc uống thuốc và bảo vệ an toàn cho cả gia đình."
+    },
+    date: "25/08/2026",
+    readTime: { en: "6 min read", vi: "6 phút đọc" },
+    category: "AI & Healthcare",
+    tags: ["MedAssist AI", "Prescription OCR", "Smart Reminders", "Gemini AI", "PWA", "Google AI Riser Vietnam", "Healthcare Tech"],
+    author: "Lê Thị Kim Anh",
+    content: {
+      en: `In today's fast-paced life, managing personal and family health often comes with obstacles: unreadable doctor's prescription handwriting, forgetting medication times, uncertainty about which specialist to consult for specific symptoms, or feeling panicked during medical emergencies.
+
+To solve these challenges, **MedAssist AI** ([https://medassist.ai.studio/](https://medassist.ai.studio/)) was created as an intelligent 24/7 personal healthcare companion, empowering you to understand your health status, optimize your medication routine, and protect your entire family.
+
+### 🌟 Key Features of MedAssist AI
+
+#### 1. 📸 AI Prescription Scanning & Explanation (Prescription OCR)
+- **Automatic Recognition:** Simply snap a photo of a prescription or medical check-up record, and the AI automatically extracts drug names, dosages, usage instructions, and follow-up appointment dates.
+- **Easy-to-Understand Explanations:** Translates complex medical terms into plain language: what the medication treats, whether to take it before or after meals, and dietary precautions.
+- **Safety Alerts:** Automatically detects potential drug interaction risks and special precautions for patients.
+
+#### 2. ⏰ Automated Medication & Follow-up Reminders (Smart Reminders)
+- **Auto-Schedule Generation:** After scanning a prescription, the system automatically builds complete medication and follow-up schedules in your calendar without manual entry.
+- **Multi-Platform Notifications:** Supports push notifications accompanied by alarm sounds, even when your phone screen is locked or turned off.
+- **Visual Schedules:** Manage medication tracking on a daily or weekly view, featuring a "Taken" check-in button so you never miss a dose or double-dose.
+
+#### 3. 💬 Pre-Visit Guidance & Symptom Triage (Pre-Visit Guidance)
+- **Symptom Evaluation:** Users enter unusual health symptoms, and the AI analyzes and categorizes the urgency level (Triage).
+- **Specialist Recommendations:** Guides you to register for the right medical specialty (Cardiology, Gastroenterology, Pulmonology, Dermatology, etc.) to save time and avoid unnecessary referrals.
+- **Preparation Advice:** Recommends essential preparations before your visit (e.g., fasting for blood tests, bringing previous lab reports).
+
+#### 4. 🚨 Emergency First Aid Handbook (Emergency First Aid)
+- Provides medically approved, step-by-step first aid procedures for common emergencies: choking, burns, heatstroke, seizures, stroke, poisoning, and more.
+- Integrates a quick 115 emergency call button and highlights crucial *"Strictly DO NOT do"* warnings to prevent further harm to victims.
+
+#### 5. 🔊 Voice Accessibility (Text-to-Speech)
+- Features natural voice reading for medical instructions, especially helpful for seniors, visually impaired individuals, or patients feeling unwell.
+
+### 🛠️ Modern Technology Stack
+
+**MedAssist AI** is built on cutting-edge technology to ensure fast response times, high accuracy, and strict data privacy:
+- **Artificial Intelligence:** Powered by **Google Gemini AI** for large language modeling and multimodal computer vision.
+- **Progressive Web App (PWA):** Enables direct installation to your smartphone home screen (Android & iOS) as a lightweight, native-like app without consuming storage.
+- **Serverless & Cloud Architecture:** Optimizes data synchronization and triggers 24/7 scheduled push reminders.
+
+### 📱 Quick Setup & User Guide
+
+1. **Access the App:** Open **MedAssist AI** on your phone browser (Safari on iOS or Chrome on Android).
+2. **Add to Home Screen:**
+   - **Android:** Tap the 3-dot menu (⋮) ➔ Select *"Add to Home screen"*.
+   - **iOS:** Tap the Share button (square icon with up arrow) ➔ Select *"Add to Home Screen"*.
+3. **Enable Sound Alerts:** Open the Reminders tab and tap *Allow Notifications* to never miss a dosage.
+
+### 🌐 Experience MedAssist AI Today
+Visit and experience **MedAssist AI** live directly in your browser:
+👉 **Live Web App:** [https://medassist.ai.studio/](https://medassist.ai.studio/)`,
+      vi: `Trong cuộc sống bận rộn hiện nay, việc chăm sóc sức khỏe cho bản thân và gia đình đôi khi gặp nhiều trở ngại: đơn thuốc chữ bác sĩ khó đọc, quên giờ uống thuốc, không rõ triệu chứng này nên khám chuyên khoa nào hay lúng túng khi gặp tình huống sơ cứu khẩn cấp.
+
+Để giải quyết những vấn đề đó, **MedAssist AI** ([https://medassist.ai.studio/](https://medassist.ai.studio/)) ra đời như một người trợ lý y tế cá nhân thông minh, đồng hành 24/7 giúp bạn hiểu rõ tình trạng sức khỏe, tối ưu hóa quá trình dùng thuốc và bảo vệ an toàn cho cả gia đình.
+
+### 🌟 Các Tính Năng Nổi Bật Của MedAssist AI
+
+#### 1. 📸 Quét & Giải Thích Đơn Thuốc Bằng AI (Prescription OCR)
+- **Nhận diện tự động:** Chỉ cần chụp ảnh đơn thuốc hoặc sổ khám bệnh, AI sẽ tự động đọc tên thuốc, liều lượng, cách dùng và ngày tái khám.
+- **Giải thích dễ hiểu:** Chuyển đổi các thuật ngữ y khoa phức tạp thành lời giải thích bình dân: thuốc này trị bệnh gì, nên uống trước hay sau ăn, cần kiêng khem những gì.
+- **Cảnh báo an toàn:** Phát hiện các nguy cơ tương tác thuốc hoặc lưu ý đặc biệt cho người bệnh.
+
+#### 2. ⏰ Tự Động Lên Lịch Nhắc Uống Thuốc & Tái Khám (Smart Reminders)
+- **Tự động tạo lịch:** Sau khi quét đơn thuốc, hệ thống tự động thiết lập toàn bộ lịch uống thuốc và lịch hẹn tái khám vào thời gian biểu mà không cần nhập tay từng mục.
+- **Thông báo đa nền tảng:** Hỗ trợ thông báo đẩy (Push Notification) kèm chuông báo ngay cả khi tắt màn hình, khóa máy.
+- **Lịch biểu trực quan:** Quản lý theo dõi lịch uống theo dạng ngày/tuần, tích hợp nút đánh dấu "Đã uống" giúp không bao giờ bị quên hoặc uống quá liều.
+
+#### 3. 💬 Tư Vấn & Định Hướng Trước Khi Đi Khám (Pre-Visit Guidance)
+- **Đánh giá triệu chứng:** Người dùng nhập các biểu hiện bất thường, AI sẽ phân tích và phân loại mức độ khẩn cấp (Triage).
+- **Gợi ý chuyên khoa:** Hướng dẫn bạn nên đăng ký khám đúng chuyên khoa (Tim mạch, Tiêu hóa, Hô hấp, Da liễu,...) để tránh mất thời gian khám vòng quanh.
+- **Lời khuyên chuẩn bị:** Hướng dẫn những điều cần chuẩn bị (nhịn ăn sáng xét nghiệm máu, đem theo các kết quả khám cũ,...).
+
+#### 4. 🚨 Cẩm Nang Sơ Cứu Khẩn Cấp (Emergency First Aid)
+- Cung cấp quy trình sơ cứu từng bước chuẩn y khoa cho các tai nạn thường gặp: hóc dị vật, bỏng, say nắng, co giật, đột quỵ, ngộ độc,...
+- Tích hợp nút gọi khẩn cấp **115** và chỉ dẫn những điều *"Tuyệt đối KHÔNG được làm"* để tránh gây nguy hiểm cho nạn nhân.
+
+#### 5. 🔊 Trợ Năng Giọng Nói (Text-to-Speech)
+- Tích hợp tính năng đọc to hướng dẫn bằng giọng nói tiếng Việt tự nhiên, đặc biệt hữu ích cho người cao tuổi, người có thị lực kém hoặc mắt mờ khi đang ốm.
+
+### 🛠️ Nền Tảng Công Nghệ Hiện Đại
+
+**MedAssist AI** được xây dựng trên nền tảng công nghệ tối tân nhằm đảm bảo tốc độ phản hồi nhanh, chính xác và bảo mật:
+- **Trí tuệ nhân tạo:** Tích hợp mô hình ngôn ngữ lớn và xử lý thị giác máy tính **Google Gemini AI**.
+- **Công nghệ PWA (Progressive Web App):** Cho phép cài đặt trực tiếp lên màn hình chính điện thoại (Android & iOS) gọn nhẹ như một app native mà không tốn dung lượng bộ nhớ.
+- **Hệ thống Serverless & Cloud:** Tối ưu hóa việc đồng bộ dữ liệu và kích hoạt thông báo hẹn giờ xuyên suốt 24/7.
+
+### 📱 Hướng Dẫn Cài Đặt & Sử Dụng Nhanh
+
+1. **Truy cập ứng dụng:** Mở liên kết **MedAssist AI** trên trình duyệt điện thoại (Safari trên iOS hoặc Chrome trên Android).
+2. **Cài đặt ra màn hình chính:**
+   - **Android:** Bấm menu 3 chấm (⋮) ➔ Chọn *"Thêm vào màn hình chính"* (Add to Home screen).
+   - **iOS:** Bấm nút Chia sẻ (biểu tượng ô vuông mũi tên lên) ➔ Chọn *"Thêm vào MH chính"*.
+3. **Bật thông báo chuông:** Mở tab Lịch nhắc và bấm Cho phép nhận thông báo để không bỏ lỡ cữ thuốc nào.
+
+### 🌐 Trải nghiệm MedAssist AI ngay hôm nay
+👉 **Live Web App:** [https://medassist.ai.studio/](https://medassist.ai.studio/)`
+    }
+  },
   {
     id: "eudi-wallet-openid4vp-android",
     title: {

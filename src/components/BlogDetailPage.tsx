@@ -78,8 +78,11 @@ export default function BlogDetailPage({ postId, onBack, onSelectPost }: BlogDet
 
   // Helper function to render rich inline markdown (bold, inline code, links)
   const renderInlineMarkdown = (text: string) => {
+    // Strip any leading markdown heading hashes if passed accidentally
+    const cleanText = text.replace(/^#{1,6}\s*/, '');
+
     // Regex for [label](url), **bold**, `code`, *italic*
-    const parts = text.split(/(\[.*?\]\(.*?\)|\*\*.*?\*\*|`.*?`|\*.*?\*)/g);
+    const parts = cleanText.split(/(\[.*?\]\(.*?\)|\*\*.*?\*\*|`.*?`|\*.*?\*)/g);
 
     return parts.map((part, index) => {
       if (!part) return null;
@@ -96,7 +99,7 @@ export default function BlogDetailPage({ postId, onBack, onSelectPost }: BlogDet
               target="_blank"
               rel="noopener noreferrer"
               onClick={playClickSound}
-              className="text-blue-400 hover:text-blue-300 font-semibold underline decoration-blue-500/40 underline-offset-4 hover:decoration-blue-400 inline-flex items-center gap-1 transition-colors px-1 py-0.5 rounded bg-blue-500/10 border border-blue-500/20"
+              className="text-blue-400 hover:text-blue-300 font-semibold underline decoration-blue-500/40 underline-offset-4 hover:decoration-blue-400 inline-flex items-center gap-1 transition-all px-2 py-0.5 rounded-lg bg-blue-500/10 border border-blue-500/20 hover:bg-blue-500/20"
             >
               <span>{renderInlineMarkdown(label)}</span>
               <ExternalLink className="w-3 h-3 text-blue-400 shrink-0 inline" />
@@ -121,7 +124,7 @@ export default function BlogDetailPage({ postId, onBack, onSelectPost }: BlogDet
         return (
           <code
             key={index}
-            className="px-2 py-0.5 mx-0.5 rounded-md text-[13px] font-mono text-blue-300 bg-slate-900 border border-slate-700/80 shadow-inner inline-block"
+            className="px-2 py-0.5 mx-0.5 rounded-md text-[13px] font-mono text-blue-300 bg-slate-950 border border-slate-800 shadow-inner inline-block"
           >
             {codeContent}
           </code>
@@ -141,11 +144,50 @@ export default function BlogDetailPage({ postId, onBack, onSelectPost }: BlogDet
     });
   };
 
+  // Helper to render formatted line items (headings, horizontal rules, standard text)
+  const renderFormattedLine = (line: string, key: number | string) => {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed === '---') return null;
+
+    if (trimmed.startsWith('#### ')) {
+      const text = trimmed.replace(/^####\s*/, '');
+      return (
+        <h4 key={key} className="text-base sm:text-lg font-bold text-blue-300 tracking-wide font-sans pt-3 pb-1 flex items-center gap-2">
+          {renderInlineMarkdown(text)}
+        </h4>
+      );
+    }
+
+    if (trimmed.startsWith('### ')) {
+      const text = trimmed.replace(/^###\s*/, '');
+      return (
+        <h3 key={key} className="text-xl sm:text-2xl font-bold text-white tracking-tight font-sans pt-5 pb-1 flex items-center gap-2">
+          {renderInlineMarkdown(text)}
+        </h3>
+      );
+    }
+
+    if (trimmed.startsWith('## ')) {
+      const text = trimmed.replace(/^##\s*/, '');
+      return (
+        <h2 key={key} className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-sans pt-6 pb-2 border-t border-slate-800/80">
+          {renderInlineMarkdown(text)}
+        </h2>
+      );
+    }
+
+    return (
+      <p key={key} className="text-sm sm:text-base text-slate-200/90 leading-relaxed sm:leading-8 font-sans">
+        {renderInlineMarkdown(line)}
+      </p>
+    );
+  };
+
   // Extract section headings for Table of Contents
-  const rawSections = post.content[lang].split('\n\n').filter((p) => p.startsWith('### '));
+  const rawSections = post.content[lang].split('\n\n').filter((p) => p.startsWith('### ') || p.startsWith('#### '));
   const tableOfContents = rawSections.map((s, idx) => {
     const firstLine = s.split('\n')[0] || '';
-    const title = firstLine.replace(/^###\s*/, '').trim();
+    const title = firstLine.replace(/^#{3,4}\s*/, '').trim();
     return {
       id: `section-${idx + 1}`,
       number: `0${idx + 1}`,
@@ -358,11 +400,14 @@ export default function BlogDetailPage({ postId, onBack, onSelectPost }: BlogDet
 
         <div className="space-y-8">
           {post.content[lang].split('\n\n').map((paragraphBlock, idx) => {
-            // 1. Heading 3 parsing
-            if (paragraphBlock.startsWith('### ')) {
+            if (!paragraphBlock.trim() || paragraphBlock.trim() === '---') return null;
+
+            // 1. Heading parsing (###, ####, ##)
+            if (paragraphBlock.startsWith('### ') || paragraphBlock.startsWith('#### ') || paragraphBlock.startsWith('## ')) {
               const rawBlockLines = paragraphBlock.split('\n').map((l) => l.trim()).filter(Boolean);
               const headingLine = rawBlockLines[0] || '';
-              const headingText = headingLine.replace(/^###\s*/, '').trim();
+              const isH4 = headingLine.startsWith('#### ');
+              const headingText = headingLine.replace(/^#{2,4}\s*/, '').trim();
 
               const sectionIndex = rawSections.findIndex((s) => s.startsWith(headingLine));
               const sectionId = sectionIndex !== -1 ? `section-${sectionIndex + 1}` : undefined;
@@ -387,27 +432,29 @@ export default function BlogDetailPage({ postId, onBack, onSelectPost }: BlogDet
               }
 
               return (
-                <div key={idx} id={sectionId} className="pt-8 pb-3 border-t border-slate-800/80 space-y-4 scroll-mt-24">
+                <div key={idx} id={sectionId} className={`space-y-4 scroll-mt-24 ${isH4 ? 'pt-4 pb-2' : idx === 0 ? 'pt-2 pb-3' : 'pt-8 pb-3 border-t border-slate-800/80'}`}>
                   {/* Heading Title Row */}
                   <div className="flex items-center gap-3">
-                    {sectionNumber && (
+                    {sectionNumber && !isH4 && (
                       <span className="px-3 py-1 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-mono font-bold shrink-0">
                         {sectionNumber}
                       </span>
                     )}
-                    <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight font-sans">
-                      {renderInlineMarkdown(headingText)}
-                    </h3>
+                    {isH4 ? (
+                      <h4 className="text-lg sm:text-xl font-bold text-blue-300 tracking-tight font-sans">
+                        {renderInlineMarkdown(headingText)}
+                      </h4>
+                    ) : (
+                      <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight font-sans">
+                        {renderInlineMarkdown(headingText)}
+                      </h3>
+                    )}
                   </div>
 
                   {/* Body Intro Paragraphs */}
                   {bodyIntroLines.length > 0 && (
                     <div className="space-y-2 pt-1">
-                      {bodyIntroLines.map((intro, i) => (
-                        <p key={i} className="text-sm sm:text-base text-slate-300 leading-relaxed font-sans">
-                          {renderInlineMarkdown(intro)}
-                        </p>
-                      ))}
+                      {bodyIntroLines.map((intro, i) => renderFormattedLine(intro, i))}
                     </div>
                   )}
 
@@ -549,11 +596,7 @@ export default function BlogDetailPage({ postId, onBack, onSelectPost }: BlogDet
                 <div key={idx} className="space-y-4 my-4">
                   {introLines.length > 0 && (
                     <div className="space-y-2">
-                      {introLines.map((intro, i) => (
-                        <p key={i} className="text-sm sm:text-base text-slate-300 leading-relaxed font-sans font-medium">
-                          {renderInlineMarkdown(intro)}
-                        </p>
-                      ))}
+                      {introLines.map((intro, i) => renderFormattedLine(intro, i))}
                     </div>
                   )}
 
@@ -623,11 +666,7 @@ export default function BlogDetailPage({ postId, onBack, onSelectPost }: BlogDet
             // 4. Standard text block with multiple lines
             return (
               <div key={idx} className="space-y-3 my-3">
-                {rawLines.map((line, lIdx) => (
-                  <p key={lIdx} className="text-sm sm:text-base text-slate-300 leading-relaxed font-sans">
-                    {renderInlineMarkdown(line)}
-                  </p>
-                ))}
+                {rawLines.map((line, lIdx) => renderFormattedLine(line, lIdx))}
               </div>
             );
           })}
