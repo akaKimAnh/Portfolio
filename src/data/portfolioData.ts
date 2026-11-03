@@ -401,7 +401,10 @@ To solve these challenges, **MedAssist AI** ([https://medassist.ai.studio/](http
 
 ### 🌐 Experience MedAssist AI Today
 Visit and experience **MedAssist AI** live directly in your browser:
-👉 **Live Web App:** [https://medassist.ai.studio/](https://medassist.ai.studio/)`,
+👉 **Live Web App:** [https://medassist.ai.studio/](https://medassist.ai.studio/)
+
+---
+*⚠️ **Medical Disclaimer:** MedAssist AI is a technical portfolio research project/concept and does not provide formal medical advice, diagnosis, or treatment. Users should always consult qualified healthcare professionals for medical inquiries.*`,
       vi: `Trong cuộc sống bận rộn hiện nay, việc chăm sóc sức khỏe cho bản thân và gia đình đôi khi gặp nhiều trở ngại: đơn thuốc chữ bác sĩ khó đọc, quên giờ uống thuốc, không rõ triệu chứng này nên khám chuyên khoa nào hay lúng túng khi gặp tình huống sơ cứu khẩn cấp.
 
 Để giải quyết những vấn đề đó, **MedAssist AI** ([https://medassist.ai.studio/](https://medassist.ai.studio/)) ra đời như một người trợ lý y tế cá nhân thông minh, đồng hành 24/7 giúp bạn hiểu rõ tình trạng sức khỏe, tối ưu hóa quá trình dùng thuốc và bảo vệ an toàn cho cả gia đình.
@@ -446,7 +449,10 @@ Visit and experience **MedAssist AI** live directly in your browser:
 3. **Bật thông báo chuông:** Mở tab Lịch nhắc và bấm Cho phép nhận thông báo để không bỏ lỡ cữ thuốc nào.
 
 ### 🌐 Trải nghiệm MedAssist AI ngay hôm nay
-👉 **Live Web App:** [https://medassist.ai.studio/](https://medassist.ai.studio/)`
+👉 **Live Web App:** [https://medassist.ai.studio/](https://medassist.ai.studio/)
+
+---
+*⚠️ **Tuyên bố miễn trừ trách nhiệm y tế (Medical Disclaimer):** Dự án MedAssist AI là sản phẩm nghiên cứu/demo công nghệ trong hồ sơ năng lực cá nhân, không cung cấp lời khuyên y tế, chẩn đoán hay điều trị y khoa chính thức. Người dùng luôn cần tham vấn ý kiến của bác sĩ chuyên khoa khi có thắc mắc về sức khỏe.*`
     }
   },
   {
