@@ -29,7 +29,7 @@ export default function Projects({ onSelectProject }: ProjectsProps) {
   };
 
   return (
-    <section id="projects" className="relative py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+    <section id="projects" className="relative py-20 px-4 sm:px-6 max-w-6xl mx-auto scroll-mt-28 sm:scroll-mt-32">
       {/* Section Title */}
       <div className="flex flex-col items-center text-center space-y-3 mb-12">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono font-semibold">

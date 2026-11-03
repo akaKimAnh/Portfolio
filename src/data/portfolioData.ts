@@ -1,4 +1,4 @@
-import { Project, Experience, Skill, Education } from '../types';
+import { Project, Experience, Skill, Education, Certification } from '../types';
 import { getAssetUrl, defaultAvatar } from '../utils/assetHelper';
 
 export const personalInfo = {
@@ -47,13 +47,13 @@ export const personalInfo = {
   stats: {
     en: [
       { label: "Core Expertise", value: "Software & Mobile" },
-      { label: "Core Tech", value: "Kotlin, Compose & React" },
+      { label: "Google AI Honor", value: "Top 500 AI Riser" },
       { label: "AI & Security", value: "Gemini API & EUDI" },
       { label: "Location", value: "HCM City, VN" }
     ],
     vi: [
       { label: "Lĩnh vực chính", value: "Software & Mobile" },
-      { label: "Công nghệ cốt lõi", value: "Kotlin, Compose & React" },
+      { label: "Giải thưởng Google", value: "Top 500 AI Riser" },
       { label: "AI & Bảo mật", value: "Gemini API & EUDI" },
       { label: "Địa điểm", value: "TP. Hồ Chí Minh" }
     ]
@@ -312,6 +312,30 @@ export const education: Education[] = [
       en: "Graduated with Honors. Specialized in IT, focusing on Android Mobile Application Development and Software Engineering.",
       vi: "Xếp loại: Giỏi. Chuyên ngành Công nghệ Thông tin, nghiên cứu phát triển ứng dụng di động Android và Hệ thống Phần mềm."
     }
+  }
+];
+
+export const certifications: Certification[] = [
+  {
+    id: "google-ai-riser-top-500",
+    title: {
+      en: "Certificate of Completion – Top 500 #AIRiserVietnam2026",
+      vi: "Chứng nhận Hoàn thành – Top 500 #AIRiserVietnam2026"
+    },
+    issuer: {
+      en: "Google for Developers",
+      vi: "Google for Developers"
+    },
+    issueDate: "10/2026",
+    badge: "Top 500",
+    badgeType: "Gold / Honors",
+    description: {
+      en: "Awarded Certificate of Completion by Google for Developers for outstanding dedication and creativity as a Top 500 participant in the #AIRiserVietnam2026 (#BuildwithGoogleAI - Vươn mình kiến tạo) nationwide program.",
+      vi: "Chứng nhận do Google for Developers trao tặng cho sự đóng góp và tính sáng tạo xuất sắc, đạt danh hiệu Top 500 toàn quốc tại chương trình #AIRiserVietnam2026 (#BuildwithGoogleAI - Vươn mình kiến tạo)."
+    },
+    image: getAssetUrl("/images/cert-top500-ai-riser.png"),
+    tags: ["Google for Developers", "#BuildwithGoogleAI", "#AIRiserVietnam2026", "Top 500", "Google AI"],
+    featured: true
   }
 ];
 
@@ -680,7 +704,8 @@ export const translations = {
       title: "Experience &",
       titleGradient: "Background",
       subtitle: "My professional journey at MOBILE-ID TECHNOLOGY AND SERVICES JSC as an Android Developer.",
-      educationTitle: "Education & Credentials"
+      educationTitle: "Education & Academic Degree",
+      certificationsTitle: "Certifications & Honors"
     },
     skills: {
       badge: "Technical Expertise & Standards",
@@ -705,21 +730,21 @@ export const translations = {
     },
     contact: {
       badge: "Let's Connect",
-      title: "Get In",
-      titleGradient: "Touch",
-      subtitle: "Feel free to reach out for Android Developer roles, technical collaboration, or project inquiries.",
-      sendSuccess: "Message Sent Successfully!",
-      sendSuccessDesc: "Thank you for reaching out. I'll get back to you as soon as possible.",
-      sendError: "Failed to send message",
-      sendErrorDesc: "Please try again later or contact directly via email.",
+      title: "Direct",
+      titleGradient: "Contact",
+      subtitle: "Feel free to reach out directly via email, GitHub, or LinkedIn for Android Developer roles and collaboration.",
+      sendSuccess: "Email Client Opened!",
+      sendSuccessDesc: "Your default mail client was launched to send your message directly.",
+      sendError: "Could not open email client",
+      sendErrorDesc: "Please copy the email address below to send your message.",
       nameLabel: "Your Name",
-      emailLabel: "Your Email",
+      emailLabel: "Email Address",
       emailInputLabel: "Your Email Address",
       subjectLabel: "Subject",
       messageLabel: "Message",
-      sendBtn: "Send Message",
-      sendingBtn: "Sending Message...",
-      contactInfo: "Direct Contact Information",
+      sendBtn: "Open Email App",
+      sendingBtn: "Opening Email...",
+      contactInfo: "Direct Channels",
       emailDirect: "Direct Email",
       locationDirect: "Current Location",
       locationLabel: "Location",
@@ -728,9 +753,9 @@ export const translations = {
       copyAddress: "Copy Email Address",
       availabilityTitle: "OPEN FOR OPPORTUNITIES",
       availabilityDesc: "Available for Full-time Android Developer roles & Technical Collaboration in Ho Chi Minh City or Remote.",
-      successTitle: "Message Sent Successfully!",
-      successDesc: "Thank you for reaching out. I'll respond as soon as possible.",
-      sendAnother: "Send Another Message"
+      successTitle: "Email Client Opened!",
+      successDesc: "Your mail application has opened with Kim Anh's email prefilled.",
+      sendAnother: "Copy Email Address"
     },
     modal: {
       keyHighlights: "Key Features & Highlights",
@@ -808,7 +833,8 @@ export const translations = {
       title: "Kinh nghiệm &",
       titleGradient: "Quá trình",
       subtitle: "Quá trình làm việc tại MOBILE-ID TECHNOLOGY AND SERVICES JSC với vai trò Android Developer.",
-      educationTitle: "Học vấn & Bằng cấp"
+      educationTitle: "Học vấn & Bằng cấp",
+      certificationsTitle: "Chứng chỉ & Giải thưởng"
     },
     skills: {
       badge: "Năng lực Kỹ thuật & Tiêu chuẩn",
@@ -833,21 +859,21 @@ export const translations = {
     },
     contact: {
       badge: "Kết nối & Hợp tác",
-      title: "Gửi Tin nhắn",
-      titleGradient: "Liên hệ",
-      subtitle: "Hãy trao đổi về các vị trí Lập trình viên Android, cơ hội hợp tác hoặc câu hỏi kỹ thuật.",
-      sendSuccess: "Gửi Tin nhắn Thành công!",
-      sendSuccessDesc: "Cảm ơn bạn đã liên hệ. Tôi sẽ phản hồi lại bạn trong thời gian sớm nhất.",
-      sendError: "Gửi tin nhắn thất bại",
-      sendErrorDesc: "Vui lòng thử lại sau hoặc gửi email trực tiếp.",
+      title: "Liên hệ",
+      titleGradient: "Trực tiếp",
+      subtitle: "Hãy trao đổi về các cơ hội công việc Android Developer, hợp tác dự án qua Email, GitHub hoặc LinkedIn.",
+      sendSuccess: "Đã mở ứng dụng Email!",
+      sendSuccessDesc: "Ứng dụng Email của bạn đã được mở với địa chỉ người nhận điền sẵn.",
+      sendError: "Không thể mở Email client",
+      sendErrorDesc: "Vui lòng sao chép địa chỉ email trực tiếp bên dưới.",
       nameLabel: "Họ và Tên",
       emailLabel: "Địa chỉ Email",
       emailInputLabel: "Địa chỉ Email của bạn",
       subjectLabel: "Tiêu đề",
       messageLabel: "Nội dung Tin nhắn",
-      sendBtn: "Gửi Tin nhắn",
-      sendingBtn: "Đang gửi...",
-      contactInfo: "Thông tin Liên hệ Trực tiếp",
+      sendBtn: "Gửi Email Trực tiếp",
+      sendingBtn: "Đang mở Email...",
+      contactInfo: "Kênh Liên hệ Trực tiếp",
       emailDirect: "Email Trực tiếp",
       locationDirect: "Địa điểm Hiện tại",
       locationLabel: "Địa điểm",
@@ -856,9 +882,9 @@ export const translations = {
       copyAddress: "Sao chép Địa chỉ Email",
       availabilityTitle: "SẴN SÀNG NHẬN DỰ ÁN & CÔNG VIỆC",
       availabilityDesc: "Sẵn sàng cho các vị trí Lập trình viên Android toàn thời gian & hợp tác kỹ thuật tại TP. Hồ Chí Minh hoặc Remote.",
-      successTitle: "Gửi Tin nhắn Thành công!",
-      successDesc: "Cảm ơn bạn đã liên hệ. Tôi sẽ phản hồi lại bạn trong thời gian sớm nhất.",
-      sendAnother: "Gửi tin nhắn khác"
+      successTitle: "Đã mở ứng dụng Email!",
+      successDesc: "Ứng dụng Email của bạn đã được kích hoạt để trao đổi trực tiếp với Kim Anh.",
+      sendAnother: "Sao chép Địa chỉ Email"
     },
     modal: {
       keyHighlights: "Tính năng & Điểm Nổi bật",

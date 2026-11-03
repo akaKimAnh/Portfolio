@@ -34,7 +34,7 @@ export default function Hero({ onCopyEmail, emailCopied }: HeroProps) {
   };
 
   return (
-    <section id="hero" className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+    <section id="hero" className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden scroll-mt-28">
       {/* Background radial ambient glow */}
       <div className="glow-spotlight w-96 h-96 bg-blue-600 top-10 left-1/2 -translate-x-1/2" />
       <div className="glow-spotlight w-80 h-80 bg-purple-600 top-40 -left-20" />

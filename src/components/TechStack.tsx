@@ -34,7 +34,7 @@ export default function TechStack() {
   };
 
   return (
-    <section id="skills" className="relative py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+    <section id="skills" className="relative py-20 px-4 sm:px-6 max-w-6xl mx-auto scroll-mt-28 sm:scroll-mt-32">
       {/* Title */}
       <div className="flex flex-col items-center text-center space-y-3 mb-12">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-semibold">

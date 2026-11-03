@@ -51,6 +51,20 @@ export interface Education {
   details: LocalizedString;
 }
 
+export interface Certification {
+  id: string;
+  title: LocalizedString;
+  issuer: LocalizedString;
+  issueDate: string;
+  badge: string;
+  badgeType?: string;
+  description: LocalizedString;
+  credentialUrl?: string;
+  image?: string;
+  tags?: string[];
+  featured?: boolean;
+}
+
 export interface TerminalCommand {
   command: string;
   description: string;

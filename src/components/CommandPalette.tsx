@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, Code2, Briefcase, Cpu, BookOpen, Mail, Github, Linkedin, Send, FileText, X, Languages } from 'lucide-react';
+import { Search, Code2, Briefcase, Cpu, BookOpen, Mail, Github, Linkedin, Send, FileText, X, Languages, Award } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
 import { playClickSound, playSuccessSound, toggleSound } from '../utils/audio';
@@ -51,6 +51,7 @@ export default function CommandPalette({ isOpen, onClose, onCopyEmail }: Command
         { id: 'hero', title: lang === 'en' ? 'Go to Hero & Bio' : 'Trang chủ & Giới thiệu', icon: Code2, action: () => navigateTo('#hero') },
         { id: 'projects', title: lang === 'en' ? 'View Android & Mobile Projects' : 'Xem Các Dự án Mobile & Web', icon: Briefcase, action: () => navigateTo('#projects') },
         { id: 'experience', title: lang === 'en' ? 'Check Experience Timeline' : 'Lịch sử Làm việc & Kinh nghiệm', icon: Briefcase, action: () => navigateTo('#experience') },
+        { id: 'cert', title: lang === 'en' ? 'Top 500 #AIRiserVietnam2026 Certificate (Google)' : 'Chứng nhận Top 500 #AIRiserVietnam2026 (Google)', icon: Award, action: () => navigateTo('#experience') },
         { id: 'skills', title: lang === 'en' ? 'Inspect Tech Stack & Skills' : 'Kỹ năng & Công nghệ', icon: Cpu, action: () => navigateTo('#skills') },
         { id: 'blog', title: lang === 'en' ? 'Read Technical Blog Articles' : 'Đọc các Bài viết Kỹ thuật', icon: BookOpen, action: () => navigateTo('#blog') },
         { id: 'contact', title: lang === 'en' ? 'Send Message / Hire Me' : 'Gửi Tin nhắn / Liên hệ', icon: Mail, action: () => navigateTo('#contact') },

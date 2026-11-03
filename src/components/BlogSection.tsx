@@ -29,7 +29,7 @@ export default function BlogSection({ onSelectBlogPost }: BlogSectionProps) {
   });
 
   return (
-    <section id="blog" className="relative py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+    <section id="blog" className="relative py-20 px-4 sm:px-6 max-w-6xl mx-auto scroll-mt-28 sm:scroll-mt-32">
       {/* Background glow */}
       <div className="glow-spotlight w-96 h-96 bg-blue-600/15 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
